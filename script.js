@@ -3,9 +3,9 @@ const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-menu a");
 const sections = document.querySelectorAll("main section[id]");
 const revealItems = document.querySelectorAll(".reveal");
+const countUpItems = document.querySelectorAll(".count-up");
 const yearNode = document.getElementById("year");
 const themeToggle = document.querySelector(".theme-toggle");
-const themeToggleLabel = document.querySelector(".theme-toggle-label");
 const themeToggleIcon = document.querySelector(".theme-toggle-icon");
 const backToTopLink = document.querySelector(".back-to-top");
 const storageKey = "portfolio-theme";
@@ -13,10 +13,6 @@ const storageKey = "portfolio-theme";
 const applyTheme = (theme) => {
   const isLight = theme === "light";
   document.body.classList.toggle("light-theme", isLight);
-
-  if (themeToggleLabel) {
-    themeToggleLabel.textContent = isLight ? "Dark Mode" : "Light Mode";
-  }
 
   if (themeToggleIcon) {
     themeToggleIcon.textContent = isLight ? "🌙" : "☀";
@@ -114,3 +110,45 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+const animateCountUp = (node) => {
+  const target = Number(node.dataset.count);
+  const suffix = node.dataset.suffix ?? "";
+
+  if (!Number.isFinite(target)) {
+    return;
+  }
+
+  const durationMs = 1200;
+  const startTime = performance.now();
+
+  const tick = (timestamp) => {
+    const progress = Math.min((timestamp - startTime) / durationMs, 1);
+    const value = Math.floor(progress * target);
+    node.textContent = `${value}${suffix}`;
+
+    if (progress < 1) {
+      window.requestAnimationFrame(tick);
+    }
+  };
+
+  window.requestAnimationFrame(tick);
+};
+
+const countObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      animateCountUp(entry.target);
+      observer.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.6,
+  }
+);
+
+countUpItems.forEach((item) => countObserver.observe(item));

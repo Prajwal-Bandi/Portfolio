@@ -10,6 +10,11 @@
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" type="image/png" href="assets/pb-logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +22,9 @@
     <header class="site-header" id="top">
       <nav class="navbar">
         <a class="brand" href="#home" aria-label="Go to home">
-          <span class="brand-mark">PB</span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/pb-logo.png" alt="">
+          </span>
           <span class="brand-text">Prajwal Bandi</span>
         </a>
 
@@ -31,16 +38,14 @@
           <div class="nav-menu" id="site-menu">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Technical Skills</a>
-            <a href="#experience">Work Experience</a>
-            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </div>
 
           <button class="theme-toggle" type="button" aria-label="Switch color theme">
             <span class="theme-toggle-icon" aria-hidden="true">☀</span>
-            <span class="theme-toggle-label">Light Mode</span>
           </button>
         </div>
       </nav>
@@ -49,28 +54,37 @@
     <main>
       <section class="hero section" id="home">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Software Engineer</p>
+          <p class="hero-status"><span aria-hidden="true"></span>Software Engineer at Cisco</p>
+          <p class="eyebrow">Backend · Observability · Automation</p>
           <h1>
-            <span class="hero-title-line">Building reliable</span>
-            <span class="hero-title-line hero-accent">backend systems</span>
-            <span class="hero-title-line">and platform experiences</span>
-            <span class="hero-title-line hero-soft">for security products.</span>
+            <span class="hero-title-line">Backend Engineer</span>
+            <span class="hero-title-line hero-accent">for security products</span>
+            <span class="hero-title-line hero-soft">and platform reliability.</span>
           </h1>
           <p class="hero-text">
-            I work across backend services, automation, observability, and delivery workflows to help
-            teams build stable, production-ready software for Cisco Secure Firewall experiences.
+            I build reliable backend services, observability workflows, and delivery automation
+            for Cisco Secure Firewall.
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">View Projects</a>
-            <a class="button button-secondary" href="#contact">Contact Me</a>
+            <a class="button button-secondary" href="https://github.com/Prajwal-Bandi" target="_blank" rel="noreferrer">View GitHub</a>
           </div>
 
-          <ul class="hero-highlights">
-            <li>Based in Bengaluru, Karnataka</li>
-            <li>Focused on backend, automation, and reliability</li>
-            <li>Hands-on experience with Cisco Secure Firewall workflows</li>
-          </ul>
+          <div class="hero-scan-grid" aria-label="Quick recruiter snapshot">
+            <article class="scan-card reveal">
+              <span class="scan-value">1 Year</span>
+              <span class="scan-label">In Cisco product engineering</span>
+            </article>
+            <article class="scan-card reveal">
+              <span class="scan-value">Python</span>
+              <span class="scan-label">Automation, scripting, and data workflows</span>
+            </article>
+            <article class="scan-card reveal">
+              <span class="scan-value">Reliability</span>
+              <span class="scan-label">Splunk, Terraform, Cypress, and release validation</span>
+            </article>
+          </div>
         </div>
 
         <aside class="hero-panel reveal" aria-label="Resume and profile highlights">
@@ -80,7 +94,7 @@
             </div>
             <div class="portrait-note">
               <span class="portrait-dot"></span>
-              Software Engineer focused on backend and platform reliability
+              Backend, observability, and automation for Cisco Secure Firewall
             </div>
           </div>
 
@@ -89,25 +103,17 @@
             <h2>Prajwal Bandi</h2>
             <p class="panel-role">Software Engineer</p>
 
-            <dl class="panel-meta">
-              <div>
-                <dt>Current Focus</dt>
-                <dd>Backend services, automation, and observability</dd>
-              </div>
-              <div>
-                <dt>Recent Work</dt>
-                <dd>Cisco Secure Firewall product workflows</dd>
-              </div>
-              <div>
-                <dt>Strengths</dt>
-                <dd>Reliability, cross-team delivery, and developer workflow improvements</dd>
-              </div>
-            </dl>
-
-            <a class="button button-download" href="assets/Prajwal-Bandi.pdf" target="_blank" rel="noreferrer">
-              Download Resume
-            </a>
-            <p class="panel-note">Open my latest resume.</p>
+            <div class="panel-actions">
+              <a class="button button-download" href="assets/Prajwal-Bandi.pdf" target="_blank" rel="noreferrer">
+                Download Resume
+              </a>
+              <a class="button button-secondary button-compact" href="https://linkedin.com/in/prajwal-bandi-83b3a5215" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a class="button button-secondary button-compact" href="mailto:prajwalbandi14@gmail.com">
+                Email
+              </a>
+            </div>
           </div>
         </aside>
       </section>
@@ -122,29 +128,30 @@
           <div class="about-copy reveal">
             <div class="about-story">
               <p class="about-lead">
-                I am a software engineer with experience at Cisco contributing to network security
-                products through backend validation, workflow automation, observability, and release-focused engineering.
-              </p>
-              <p>
-                My work has centered on Cisco Secure Firewall experiences, where I have supported
-                end-to-end product workflows, backend API validation, feature readiness, and cross-team delivery.
-                I enjoy building systems that are reliable, measurable, and easier for teams to operate with confidence.
+                I am a software engineer at Cisco contributing to network security products through
+                backend validation, workflow automation, observability, and release-focused engineering.
               </p>
             </div>
 
             <div class="about-details">
               <article class="about-feature">
                 <h3>What I focus on</h3>
-                <p>
-                  Backend services, automation coverage, observability, and engineering quality for security-focused platforms.
-                </p>
+                <ul class="feature-list">
+                  <li>Backend development</li>
+                  <li>API validation</li>
+                  <li>Observability and debugging</li>
+                  <li>Terraform automation</li>
+                </ul>
               </article>
 
               <article class="about-feature">
                 <h3>How I work</h3>
-                <p>
-                  I collaborate closely with backend, frontend, QA, and DevOps teams to move features from development to stable releases.
-                </p>
+                <ul class="feature-list">
+                  <li>Ship release-ready features</li>
+                  <li>Work across QA, backend, and DevOps</li>
+                  <li>Turn debugging into measurable fixes</li>
+                  <li>Improve reliability for production teams</li>
+                </ul>
               </article>
             </div>
 
@@ -160,12 +167,12 @@
 
           <div class="about-cards reveal">
             <article class="info-card">
-              <span class="info-value">1+ Years</span>
-              <span class="info-label">Hands-on experience in software engineering and product-quality workflows</span>
+              <span class="info-value">1 Year</span>
+              <span class="info-label">Contributing to product engineering and release workflows at Cisco</span>
             </article>
             <article class="info-card">
-              <span class="info-value">Cisco</span>
-              <span class="info-label">Experience contributing to Cisco Secure Firewall product development</span>
+              <span class="info-value count-up" data-count="2" data-suffix="">2</span>
+              <span class="info-label">Core workstreams spanning backend validation and observability delivery</span>
             </article>
             <article class="info-card">
               <span class="info-value">8.7 CGPA</span>
@@ -195,7 +202,7 @@
 
         <div class="skills-grid">
           <article class="skill-card reveal">
-            <span class="skill-kicker">Core Stack</span>
+            <span class="skill-kicker">Programming</span>
             <h3>Languages</h3>
             <p class="skill-copy">
               Languages I use across automation, backend validation, scripting, and product engineering tasks.
@@ -209,13 +216,12 @@
           </article>
 
           <article class="skill-card reveal">
-            <span class="skill-kicker">Platform Engineering</span>
+            <span class="skill-kicker">Product Engineering</span>
             <h3>Backend &amp; APIs</h3>
             <p class="skill-copy">
-              Experience supporting service behavior, integration workflows, and backend-facing product validation.
+              Experience supporting service behavior, integration workflows, backend validation, and security product APIs.
             </p>
             <div class="chip-group">
-              <span>Backend Services</span>
               <span>REST APIs</span>
               <span>Microservices</span>
               <span>MongoDB</span>
@@ -223,7 +229,7 @@
           </article>
 
           <article class="skill-card reveal">
-            <span class="skill-kicker">Release Quality</span>
+            <span class="skill-kicker">DevOps</span>
             <h3>Automation &amp; Delivery</h3>
             <p class="skill-copy">
               Tools and frameworks I use to strengthen coverage, accelerate validation, and support smoother releases.
@@ -239,17 +245,32 @@
           </article>
 
           <article class="skill-card reveal">
-            <span class="skill-kicker">Operational Visibility</span>
+            <span class="skill-kicker">Monitoring</span>
             <h3>Observability &amp; Workflow</h3>
             <p class="skill-copy">
               Capabilities that help teams debug faster, monitor runtime behavior, and improve engineering reliability.
             </p>
             <div class="chip-group">
               <span>Splunk Observability</span>
+              <span>StatsD</span>
+              <span>Metrics</span>
+              <span>Alerts</span>
               <span>Log Analysis</span>
               <span>Root Cause Analysis</span>
-              <span>Agile Delivery</span>
               <span>Jira</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-kicker">Testing</span>
+            <h3>Quality Engineering</h3>
+            <p class="skill-copy">
+              Test and validation tooling that supports faster feedback loops and stronger release confidence.
+            </p>
+            <div class="chip-group">
+              <span>Cypress</span>
+              <span>Postman</span>
+              <span>API Testing</span>
             </div>
           </article>
         </div>
@@ -271,14 +292,15 @@
               <h3>Software Automation Trainee (Apprentice)</h3>
               <p class="timeline-company">Cisco Systems Pvt. Ltd.</p>
               <p>
-                Supporting engineering quality for Cisco Secure Firewall by contributing to automation,
-                backend validation, feature delivery, and release readiness across security product workflows.
+                Contributing to Cisco Secure Firewall engineering with a focus on observability,
+                operational readiness, workflow automation, and release validation.
               </p>
               <ul>
-                <li>Built and maintained Cypress-based end-to-end automation for important FMC-FTD workflows.</li>
-                <li>Validated backend APIs and workflow behavior to improve release confidence and product stability.</li>
-                <li>Investigated software issues through log analysis, debugging, and functional validation.</li>
-                <li>Contributed to backend integrations, targeted UI improvements, and collaboration across QA, frontend, and DevOps teams.</li>
+                <li>Owned major parts of the metrics and alerting implementation for an asynchronous firewall policy-impact analysis platform.</li>
+                <li>Implemented and expanded 40+ operational signals covering outcomes, latency, failures, retries, timeouts, SLA breaches, and queue health.</li>
+                <li>Developed Splunk Observability dashboards and Terraform-managed alerts for failed, cancelled, timed-out, and partial-success workflows.</li>
+                <li>Added tenant-, device-, and analysis-level correlation dimensions to improve troubleshooting across distributed workflows.</li>
+                <li>Built and maintained Cypress-based end-to-end automation for critical firewall-management workflows.</li>
               </ul>
             </div>
           </article>
@@ -350,6 +372,84 @@
         </div>
       </section>
 
+      <section class="section" id="certifications">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Certifications</p>
+          <h2>Professional learning and validated skills</h2>
+        </div>
+
+        <div class="credentials-grid">
+          <article class="credential-card reveal credential-card-primary">
+            <span class="credential-tag">Certification</span>
+            <h3>Masters Program in Data Science</h3>
+            <p class="credential-source">ExcelR Institute, Bangalore</p>
+            <p>
+              Completed a structured Data Science program covering practical analytics foundations,
+              applied learning, and industry-relevant problem solving across the data workflow.
+            </p>
+            <div class="credential-meta">
+              <span>Data Science</span>
+              <span>ExcelR</span>
+            </div>
+            <a class="project-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7208536341393887232/" target="_blank" rel="noreferrer">View Certificate</a>
+          </article>
+
+          <article class="credential-card reveal">
+            <span class="credential-tag">Certification</span>
+            <h3>CCNA Course</h3>
+            <p class="credential-source">Cisco Certified Network Associate Track</p>
+            <p>
+              Built core networking knowledge around routing, switching, network fundamentals,
+              and Cisco-focused concepts that support a stronger systems and infrastructure foundation.
+            </p>
+            <div class="credential-meta">
+              <span>Networking</span>
+              <span>CCNA</span>
+            </div>
+            <a class="project-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7420825006198366208/" target="_blank" rel="noreferrer">View Certificate</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="awards">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Awards &amp; Recognition</p>
+          <h2>Moments of impact and recognition</h2>
+        </div>
+
+        <div class="credentials-grid credentials-grid-awards">
+          <article class="credential-card reveal">
+            <span class="credential-tag">Recognition</span>
+            <h3>Codex Challenge Winner</h3>
+            <p class="credential-source">Cisco Recognition</p>
+            <p>
+              Recognized through the Think Really Big Codex Cisco Challenge for initiative,
+              problem solving, and contribution toward impactful engineering work.
+            </p>
+            <div class="credential-meta">
+              <span>Cisco</span>
+              <span>Challenge Recognition</span>
+            </div>
+            <a class="project-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7479944114235699200/" target="_blank" rel="noreferrer">View Recognition</a>
+          </article>
+
+          <article class="credential-card reveal">
+            <span class="credential-tag">Award</span>
+            <h3>Honored Think Really Big for Project Contribution</h3>
+            <p class="credential-source">Cisco Project Contribution Recognition</p>
+            <p>
+              Honored for meaningful project contribution, reflecting ownership,
+              teamwork, and consistent delivery toward product and engineering goals.
+            </p>
+            <div class="credential-meta">
+              <span>Cisco</span>
+              <span>Project Contribution</span>
+            </div>
+            <a class="project-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7452334740407488512/" target="_blank" rel="noreferrer">View Recognition</a>
+          </article>
+        </div>
+      </section>
+
       <section class="section" id="projects">
         <div class="section-heading reveal">
           <p class="eyebrow">Projects</p>
@@ -358,32 +458,52 @@
 
         <div class="projects-grid">
           <article class="project-card reveal">
-            <div class="project-tag">Security Platform</div>
-            <h3>Policy Impact Analyzer (PIA)</h3>
+            <div class="project-card-head">
+              <div class="project-tag">Security Platform</div>
+              <span class="project-number">01</span>
+            </div>
+            <h3>Policy Impact Analyser (PIA)</h3>
+            <p class="project-role">Observability &amp; operational readiness</p>
             <p>
-              A backend service for Cisco Secure Firewall that analyzes the impact of policy changes
-              before deployment, helping administrators assess affected traffic, devices, and rules.
+              An asynchronous backend platform that evaluates pending firewall-policy changes across
+              multiple devices and policy types before deployment. My primary contribution was making
+              its distributed workflows observable and operationally supportable.
             </p>
             <ul>
-              <li>Improved monitoring, alerting, and runtime visibility.</li>
-              <li>Supported backend enhancements and workflow validation.</li>
-              <li>Contributed to platform usability and integration-focused improvements.</li>
+              <li>Instrumented 40+ operational signals for outcomes, duration, failures, retries, timeouts, SLA breaches, and queue health.</li>
+              <li>Added correlation dimensions across tenant, device, analysis, failure stage, and error type for end-to-end troubleshooting.</li>
+              <li>Built Splunk Observability dashboards and Terraform-managed alerts for failure, cancellation, timeout, and partial-success scenarios.</li>
             </ul>
-            <a class="project-link" href="outputs/pia/index.html" target="_blank" rel="noreferrer">View Project</a>
+            <div class="project-meta">
+              <span>Java</span>
+              <span>StatsD</span>
+              <span>Splunk Observability</span>
+              <span>Terraform</span>
+            </div>
           </article>
 
           <article class="project-card reveal">
-            <div class="project-tag">Developer Productivity</div>
+            <div class="project-card-head">
+              <div class="project-tag">Developer Productivity</div>
+              <span class="project-number">02</span>
+            </div>
             <h3>PR Workflow Automation Tool</h3>
+            <p class="project-role">Workflow automation</p>
             <p>
               An internal automation tool that streamlines pull request creation across repositories,
               reducing repetitive manual effort and improving development workflow consistency.
             </p>
             <ul>
-              <li>Streamlined pull request creation across repositories.</li>
-              <li>Improved workflow consistency and reduced setup friction.</li>
-              <li>Made repeated coordination tasks easier to manage.</li>
+              <li>Streamlined pull request creation across repositories and routine engineering workflows.</li>
+              <li>Improved consistency for repeated repo setup and reduced manual coordination overhead.</li>
+              <li>Focused on making repetitive delivery tasks easier, faster, and less error-prone.</li>
             </ul>
+            <div class="project-meta">
+              <span>JavaScript</span>
+              <span>GitHub</span>
+              <span>Automation</span>
+              <span>Developer Tools</span>
+            </div>
             <a class="project-link" href="https://github.com/Prajwal-Bandi/PR-Automation" target="_blank" rel="noreferrer">View Project</a>
           </article>
         </div>
@@ -393,7 +513,7 @@
         <div class="contact-shell reveal">
           <div class="section-heading">
             <p class="eyebrow">Contact</p>
-            <h2>Let&apos;s build something strong together</h2>
+            <h2>Let&apos;s connect</h2>
           </div>
 
           <div class="contact-grid">
@@ -419,7 +539,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Prajwal Bandi. Designed and developed by Prajwal Bandi.</p>
+      <p>&copy; <span id="year"></span> Prajwal Bandi. Built with HTML, CSS, and JavaScript.</p>
       <a class="back-to-top" href="#top">Back to top</a>
     </footer>
   </div>
